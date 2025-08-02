@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/r4lrgx/dpapi/pkg/dpapi"
+	"github.com/r4lrgx/dpapi/dpapi"
 )
 
 func main() {

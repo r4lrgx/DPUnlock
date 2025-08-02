@@ -8,22 +8,21 @@
 # Test binary, built with `go test -c`
 *.test
 
-# Go cache and dependency files
+# Go build system artifacts
 go.sum
 go.work
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# Output
+out/**
+!out/typescript/
+!out/typescript/**
 
-# JetBrains IDEs (GoLand, IntelliJ)
+# IDE-specific folders (JetBrains family: GoLand, IntelliJ, etc.)
 .idea/
 
-# MacOS system files
-.DS_Store
-
-# Windows system files
+# Windows thumbnail cache
 Thumbs.db
 
-# Node.js files
+# Node.js
 node_modules/
-*.yaml
+pnpm*
