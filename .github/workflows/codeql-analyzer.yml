@@ -1,0 +1,30 @@
+name: 'CodeQL Analyzer'
+
+on:
+ push:
+ pull_request:
+
+jobs:
+ analyze:
+  name: Analyzer
+  runs-on: ubuntu-latest
+  permissions:
+   actions: read
+   contents: read
+   security-events: write
+  strategy:
+   fail-fast: false
+   matrix:
+    language: ['go', 'javascript-typescript']
+  steps:
+   - name: 📦 Checkout code
+     uses: actions/checkout@v4
+   - name: 🚀 Setting up CodeQL
+     uses: github/codeql-action/init@v3
+     with:
+      languages: ${{ matrix.language }}
+   - name: 🚀 Running CodeQL Analysis
+     uses: github/codeql-action/analyze@v3
+     with:
+      category: '/language:${{ matrix.language }}'
+     continue-on-error: true
