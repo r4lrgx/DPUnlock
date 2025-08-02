@@ -7,7 +7,6 @@
 
 # Test binary, built with `go test -c`
 *.test
-**/test/
 
 # Go cache and dependency files
 go.sum
@@ -26,5 +25,5 @@ go.work
 Thumbs.db
 
 # Node.js files
-**/node_modules/
+node_modules/
 *.yaml
