@@ -1,4 +1,4 @@
-// Basic DPAPI usage in TS: encrypt with @primno/dpapi, decrypt via external dpapi.exe.
+// Basic DPAPI usage in TS: encrypt with @primno/dpapi, decrypt via external DPUnlock.exe.
 // No extra decryption libs needed in Node.js.
 // Uses "CurrentUser" scope and no entropy.
 
