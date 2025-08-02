@@ -1,0 +1,30 @@
+# Minimal .gitignore for aegis see full templates:
+# https://github.com/github/gitignore/blob/main/Go.gitignore
+#
+# Build artifacts
+*.exe
+*.outs
+
+# Test binary, built with `go test -c`
+*.test
+**/test/
+
+# Go cache and dependency files
+go.sum
+go.work
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# JetBrains IDEs (GoLand, IntelliJ)
+.idea/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Node.js files
+**/node_modules/
+*.yaml
