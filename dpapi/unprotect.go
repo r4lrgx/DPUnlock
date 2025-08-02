@@ -20,8 +20,8 @@ var (
 	procLocalFree     = kernel32.NewProc("LocalFree")
 )
 
-func Unprotect(data, entropy []byte, scope uint32) ([]byte, error) {
-	inBlob := toBlob(data)
+func Unprotect(encryptPass, entropy []byte, scope uint32) ([]byte, error) {
+	inBlob := toBlob(encryptPass)
 
 	var entropyBlob *dataBlob
 	if len(entropy) > 0 {

@@ -23,7 +23,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	data, err := base64.StdEncoding.DecodeString(inputB64)
+	encryptPass, err := base64.StdEncoding.DecodeString(inputB64)
 	check("Failed to decode input:", err)
 
 	var entropy []byte
@@ -35,7 +35,7 @@ func main() {
 	scope, err := dpapi.ParseScope(scopeStr)
 	check("Invalid scope:", err)
 
-	plaintext, err := dpapi.Unprotect(data, entropy, scope)
+	plaintext, err := dpapi.Unprotect(encryptPass, entropy, scope)
 	check("Decryption failed:", err)
 
 	fmt.Print(base64.StdEncoding.EncodeToString(plaintext))

@@ -1,3 +1,7 @@
+// Basic DPAPI usage in TS: encrypt with @primno/dpapi, decrypt via external dpapi.exe.
+// No extra decryption libs needed in Node.js.
+// Uses "CurrentUser" scope and no entropy.
+
 import { execFileSync } from 'child_process';
 import { Dpapi } from '@primno/dpapi';
 import path from 'path';
