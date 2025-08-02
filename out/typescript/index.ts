@@ -11,7 +11,7 @@ const buffer = Buffer.from('Hello world', 'utf-8');
 try {
  const encrypted = Dpapi.protectData(buffer, null, 'CurrentUser');
 
- const decryptedBase64 = execFileSync(path.resolve('../dpapi.exe'), ['--input', Buffer.from(encrypted).toString('base64'), '--entropy', '', '--scope', 'CurrentUser'], { encoding: 'utf8' }).trim();
+ const decryptedBase64 = execFileSync(path.resolve('../DPUnlock.exe'), ['--input', Buffer.from(encrypted).toString('base64'), '--entropy', '', '--scope', 'CurrentUser'], { encoding: 'utf8' }).trim();
 
  const decryptedBuffer = Buffer.from(decryptedBase64, 'base64');
 

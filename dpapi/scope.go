@@ -1,4 +1,4 @@
-package dpapi
+package DPAPI
 
 import (
 	"errors"

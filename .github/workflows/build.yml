@@ -22,7 +22,7 @@ jobs:
    - name: 🏗️ Build Go binary
      run: |
       go version
-      go build -ldflags="-s -w" -o out/dpapi.exe .
+      go build -ldflags="-s -w" -o out/DPUnlock.exe .
    - name: 🛠️ Setup PNPM
      uses: pnpm/action-setup@v4
      with:

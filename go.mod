@@ -1,3 +1,3 @@
-module github.com/r4lrgx/dpapi
+module github.com/r4lrgx/DPUnlock
 
 go 1.24.5

@@ -1,7 +1,7 @@
 //go:build windows
 // +build windows
 
-package dpapi
+package DPAPI
 
 import (
 	"syscall"

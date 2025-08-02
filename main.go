@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/r4lrgx/dpapi/dpapi"
+	"github.com/r4lrgx/DPUnlock/DPAPI"
 )
 
 func main() {
@@ -32,10 +32,10 @@ func main() {
 		check("Failed to decode entropy:", err)
 	}
 
-	scope, err := dpapi.ParseScope(scopeStr)
+	scope, err := DPAPI.ParseScope(scopeStr)
 	check("Invalid scope:", err)
 
-	plaintext, err := dpapi.Unprotect(encryptPass, entropy, scope)
+	plaintext, err := DPAPI.Unprotect(encryptPass, entropy, scope)
 	check("Decryption failed:", err)
 
 	fmt.Print(base64.StdEncoding.EncodeToString(plaintext))
